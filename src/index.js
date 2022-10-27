@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Chap1 from './docs/Chap1-Hello-World'
+import Chap2 from './docs/Chap2-JSX'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Chap1 />
+    <Chap2 />
   </React.StrictMode>
 );
 
