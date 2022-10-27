@@ -4,14 +4,22 @@ import './index.css';
 import App from './App';
 import Chap1 from './docs/Chap1-Hello-World'
 import Chap2 from './docs/Chap2-JSX'
+import Chap3 from './docs/Chap3-element-rendering'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Chap2 />
-  </React.StrictMode>
-);
+
+const tick = () => {
+  const element = (
+    <React.StrictMode>
+      <Chap3 />
+    </React.StrictMode>
+  )
+
+  root.render(element)
+}
+  
+setInterval(tick, 1000)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
