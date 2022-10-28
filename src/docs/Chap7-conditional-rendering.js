@@ -1,3 +1,5 @@
+import React from "react"
+
 const UserGreeting = props => <h1>Welcom back!</h1>
 const GuestGreeting = props => <h1>Please sign up.</h1>
 
@@ -7,4 +9,46 @@ const Greeting = props => {
     return isLoggedIn ? <UserGreeting /> : <GuestGreeting />
 }
 
-export default Greeting
+const LoginButton = props => (
+    <button onClick={props.onClick}>
+        Login
+    </button>
+)
+
+const LogoutButton = props => (
+    <button onClick={props.onClick}>
+        Logout
+    </button>
+)
+
+class LoginControl extends React.Component {
+    constructor(props) {
+        super(props)
+        this.handleLoginClick = this.handleLoginClick.bind(this)
+        this.handleLogoutClick = this.handleLogoutClick.bind(this)
+        this.state = {isLoggedIn: false}
+    }
+
+    handleLoginClick() {
+        this.setState({isLoggedIn: true})
+    }
+
+    handleLogoutClick() {
+        this.setState({isLoggedIn: false})
+    }
+
+    render() {
+        const isLoggedIn = this.state.isLoggedIn
+        let button = isLoggedIn ? <LogoutButton onClick={this.handleLogoutClick} /> : <LoginButton onClick={this.handleLoginClick} />
+
+        return (
+            <div>
+                <Greeting isLoggedIn={isLoggedIn}/>
+                {button}
+            </div>
+        )
+    }
+}
+
+
+export default LoginControl
