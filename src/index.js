@@ -7,20 +7,14 @@ import Chap2 from './docs/Chap2-JSX'
 import Chap3 from './docs/Chap3-element-rendering'
 import Chap4 from './docs/Chap4-Component-Props'
 import Clock from './docs/Chap5-State-Life'
+import Chap6 from './docs/Chap6-Handling-Events'
 import reportWebVitals from './reportWebVitals';
 import Comment from './docs/Chap4-Component-Props';
+import Toggle from './docs/Chap6-Handling-Events';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const comment = () => root.render(
-  <div> 
-    <Clock />
-    <Clock />
-    <Clock />
-  </div>
-)
-
-setInterval(comment, 1000)
+root.render(<Toggle />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
