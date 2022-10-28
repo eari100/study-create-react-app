@@ -12,7 +12,13 @@ import Comment from './docs/Chap4-Component-Props';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const comment = () => root.render(<Clock />)
+const comment = () => root.render(
+  <div> 
+    <Clock />
+    <Clock />
+    <Clock />
+  </div>
+)
 
 setInterval(comment, 1000)
 
