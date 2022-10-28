@@ -11,11 +11,13 @@ import Chap6 from './docs/Chap6-Handling-Events'
 import reportWebVitals from './reportWebVitals';
 import Comment from './docs/Chap4-Component-Props';
 import Toggle from './docs/Chap6-Handling-Events';
-import LoginControl from './docs/Chap7-conditional-rendering'
+import Mailbox from './docs/Chap7-conditional-rendering'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<LoginControl />)
+const messages = ['React', 'Re: React', 'Re:Re: React']
+
+root.render(<Mailbox unreadMessages={messages} />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
