@@ -22,7 +22,7 @@ class Clock extends React.Component {
     }
 
     tick() {
-        this.setState({date: new Date()})
+        this.setState({date: new Date()}) // state 수정
     }
 
     render() {
