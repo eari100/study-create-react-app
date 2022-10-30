@@ -12,10 +12,13 @@ import reportWebVitals from './reportWebVitals';
 import Comment from './docs/Chap4-Component-Props';
 import Toggle from './docs/Chap6-Handling-Events';
 import Page from './docs/Chap7-conditional-rendering'
+import NumberList from './docs/Chap8-list-and-key'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Page />)
+const numbers = [1, 2, 3, 4, 5]
+
+root.render(<NumberList numbers={numbers} />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
