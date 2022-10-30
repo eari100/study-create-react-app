@@ -12,13 +12,16 @@ import reportWebVitals from './reportWebVitals';
 import Comment from './docs/Chap4-Component-Props';
 import Toggle from './docs/Chap6-Handling-Events';
 import Page from './docs/Chap7-conditional-rendering'
-import NumberList from './docs/Chap8-list-and-key'
+import Blog from './docs/Chap8-list-and-key'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const numbers = [1, 2, 3, 4, 5]
+const posts = [
+    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+]
 
-root.render(<NumberList numbers={numbers} />)
+root.render(<Blog posts={posts} />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
