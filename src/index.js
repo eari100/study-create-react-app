@@ -8,17 +8,16 @@ import Chap3 from './docs/Chap3-element-rendering'
 import Chap4 from './docs/Chap4-Component-Props'
 import Clock from './docs/Chap5-State-Life'
 import Chap6 from './docs/Chap6-Handling-Events'
-import reportWebVitals from './reportWebVitals';
-import Comment from './docs/Chap4-Component-Props';
-import Toggle from './docs/Chap6-Handling-Events';
+import reportWebVitals from './reportWebVitals'
+import Comment from './docs/Chap4-Component-Props'
+import Toggle from './docs/Chap6-Handling-Events'
 import Page from './docs/Chap7-conditional-rendering'
 import NumberList from './docs/Chap8-list-and-key'
+import NameForm from './docs/Chap9-forms'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const numbers = [1, 2, 3, 4, 5]
-
-root.render(<NumberList numbers={numbers} />)
+root.render(<NameForm />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
