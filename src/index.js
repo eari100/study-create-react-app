@@ -14,10 +14,12 @@ import Toggle from './docs/Chap6-Handling-Events'
 import Page from './docs/Chap7-conditional-rendering'
 import NumberList from './docs/Chap8-list-and-key'
 import Reservation from './docs/Chap9-forms'
+import Calculator from './docs/Chap10-lifting-state-up'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Reservation />)
+root.render(<Calculator />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
